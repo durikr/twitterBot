@@ -5,7 +5,15 @@ const cheerio = require('cheerio');
 require("dotenv").config({ path: __dirname + "/.env" });
 const { twitterClient } = require("./twitterClient.js");
 
+const express = require('express')
+const app = express()
+const port = process.env.PORT || 4000;
+
 const newsSite = 'https://www.bbc.com';
+
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`)
+})
 
 const OpenAI = require("openai");
 const openai = new OpenAI();
