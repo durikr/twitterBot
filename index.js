@@ -142,7 +142,7 @@ const tweet = async (filePath, title, author, link) => {
 }
 
 // Main function, which calls all the other functions
- const cronTweet = new CronJob("0/5 * * * *", async () => {
+ const cronTweet = new CronJob("15 * * * *", async () => {
     (async () => {
         const breakingNews = await getBreakingNews();
         // REAL FOR LOOP
